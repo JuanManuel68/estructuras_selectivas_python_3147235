@@ -12,9 +12,9 @@ else:
 #ejemplo
 #elanore un programa en python que determine si una persona es mayor o menor de edad
 #por lo tanto, habilitada para votar
-edad = 18
-doc = False
-if edad >= 18 and doc == True:
+edad = int(input("ingrese su edad: "))
+doc = input("tiene documento? (SI/NO)")
+if edad >= 18 and doc == "SI":
     print("Eres mayor de edad")
     print("puedes votar")
 else:
