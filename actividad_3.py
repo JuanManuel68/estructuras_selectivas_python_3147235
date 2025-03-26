@@ -46,75 +46,7 @@ salud, pension, Arl
         de horas por el valor a pagar por hora)
 '''
 contrato = input("ingrese el tipo de contrato: ")
-salario_neto=0contrato = input("ingrese el tipo de contrato (a, b, c, d): ")
-salario_neto = 0
-
-if contrato == "a":
-    print("Eligió: contrato a término indefinido")
-    anti = int(input("Ingrese la antigüedad del empleado (años): "))
-    grado = int(input("Ingrese el grado o escalafón del empleado (1-5): "))
-    salario_min = int(input("Ingrese el valor del salario mínimo: "))
-
-    if grado < 1 or grado > 5:
-        print("Grado no válido")
-        salario_men = 0
-    else:
-        salario_men = salario_min * (1.5 + (grado - 1) * 0.2)
-
-    if anti <= 5:
-        bono = salario_men * 0.01
-    elif anti <= 10:
-        bono = salario_men * 0.02
-    else:
-        bono = salario_men * 0.03
-
-    eps = salario_men * 0.25
-    pension = salario_men * 0.20
-    arl = salario_men * 0.15
-    salario_neto = salario_men + bono - eps - pension - arl
-
-elif contrato == "b":
-    print("Eligió: contrato por prestación de servicio")
-    valor_contrato = int(input("Ingrese el valor del contrato: "))
-    num_meses = int(input("Ingrese el número de meses del contrato: "))
-    antiguedad = int(input("Ingrese la antigüedad del empleado (años): "))
-
-    if num_meses <= 0:
-        print("Número de meses no válido")
-        salario_mensual = 0
-    else:
-        salario_mensual = valor_contrato / num_meses
-
-    eps = salario_mensual * 0.15
-    pension = salario_mensual * 0.10
-
-    if antiguedad >= 10:
-        bonificacion = salario_mensual * 0.005
-        salario_neto = salario_mensual - eps - pension + bonificacion
-    else:
-        salario_neto = salario_mensual - eps - pension
-
-elif contrato == "c":
-    print("Eligió: contrato de aprendizaje")
-    salario_minimo = int(input("Ingrese el valor del salario mínimo: "))
-    salario_neto = salario_minimo - salario_minimo * 0.25
-
-elif contrato == "d":
-    print("Eligió: contrato por jornal (freelance)")
-    numero_horas = int(input("Ingrese el número de horas: "))
-    valor_hora = int(input("Ingrese el valor por hora a pagar: "))
-
-    if numero_horas <= 0 or valor_hora <= 0:
-        print("Número de horas o valor por hora no válido")
-        salario_neto = 0
-    else:
-        salario_neto = numero_horas * valor_hora
-
-else:
-    print("Tipo de contrato no existe")
-
-print("El salario neto es: ", salario_neto)
-print("Fin del programa")
+salario_neto=0
 if contrato == "a":
     print("Eligió: contrato a término indefinido")
     anti = int(input("Ingrese la antigüedad del empleado (años): "))
